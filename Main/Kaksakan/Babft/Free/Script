@@ -1,0 +1,72 @@
+local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
+
+local Window = Library.CreateLib("Kak.Hub Babft Script", "DarkTheme")
+
+local Tab = Window:NewTab("Main")
+local Section = Tab:NewSection("Main")
+Section:NewLabel("İ will add Auto Farm Gold Later!")
+
+local Tab = Window:NewTab("Player")
+local Section = Tab:NewSection("Player")
+
+Section:NewTextBox("WalkSpeed", "Change your WalkSpeed", function(Value)
+    game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = Value
+end)
+
+Section:NewTextBox("JumpPower", "Change your JumpPower", function(Value)
+    game.Players.LocalPlayer.Character.Humanoid.JumpPower = Value
+end)
+
+   
+local Tab = Window:NewTab("Teleporters")
+local Section = Tab:NewSection("Teleporters")
+
+Section:NewButton("WaterFall Secret Place", "Click to teleport to the Secret Door", function()
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(225.491638, -10.5000839, 1175.09253, -1, 0, 0, 0, 1, 0, 0, 0, -1)
+end)
+
+Section:NewButton("White Team", "Click to teleport to the White Team", function()
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-66.7394409, -7.48995781, -504.863495, 0.499959469, -0.707106769, 0.500040531, -0.707106769, 8.11219215e-05, 0.707106769, -0.500040531, -0.707106769, -0.499959469)
+end)
+
+Section:NewButton("Black Team", "Click to teleport to the Black Team", function()
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-488.321045, -7.48995876, -52.5449142, -0.499959469, -0.707106769, -0.500040531, -0.707106769, -8.10623169e-05, 0.707106769, -0.500040531, 0.707106769, -0.499959469)
+end)
+
+Section:NewButton("Red Team", "Click to teleport to the Red Team", function()
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(381.190094, -7.48995781, -81.6685486, 0.499959469, 0.707106769, 0.500040531, -0.707106769, -8.10623169e-05, 0.707106769, 0.500040531, -0.707106769, 0.499959469)
+end)
+
+Section:NewButton("Blue Team", "Click to teleport to the Blue Team", function()
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(381.190094, -7.48995781, 283.331451, 0.499959469, 0.707106769, 0.500040531, -0.707106769, -8.10623169e-05, 0.707106769, 0.500040531, -0.707106769, 0.499959469)
+end)
+
+Section:NewButton("Pink Team", "Click to teleport to the Pink Team", function()
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(381.190094, -7.48995781, 630.331421, 0.499959469, 0.707106769, 0.500040531, -0.707106769, -8.10623169e-05, 0.707106769, 0.500040531, -0.707106769, 0.499959469)
+end)
+
+Section:NewButton("Yellow Team", "Click to teleport to the Yellow Team", function()
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-488.321045, -7.48995876, 657.455078, -0.499959469, -0.707106769, -0.500040531, -0.707106769, -8.10623169e-05, 0.707106769, -0.500040531, 0.707106769, -0.499959469)
+end)
+
+Section:NewButton("Green Team", "Click to teleport to the Green Team", function()
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-488.321045, -7.48995876, 310.455078, -0.499959469, -0.707106769, -0.500040531, -0.707106769, -8.10623169e-05, 0.707106769, -0.500040531, 0.707106769, -0.499959469)
+end)
+
+local Tab = Window:NewTab("Others")
+local Section = Tab:NewSection("Credits and Others")
+
+Section:NewLabel("By Kaksakan")
+
+Section:NewButton("My Discord Server", "Click to copy my Discord Server link", function()
+    setclipboard("https://discord.gg/tNf6Fsvk")
+    print(Copied)
+end)
+
+Section:NewKeybind("On - Off Uİ", "KeybindInfo", Enum.KeyCode.F, function()
+	Library:ToggleUI()
+end)
+
+Section:NewButton("Mobile Keybord", "Use this if u are on MOBİLE", function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/advxzivhsjjdhxhsidifvsh/mobkeyboard/main/main.txt", true))()
+end)
