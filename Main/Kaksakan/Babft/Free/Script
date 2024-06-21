@@ -4,7 +4,63 @@ local Window = Library.CreateLib("Kak.Hub Babft Script", "DarkTheme")
 
 local Tab = Window:NewTab("Main")
 local Section = Tab:NewSection("Main")
-Section:NewLabel("İ will add Auto Farm Gold Later!")
+
+Section:NewButton("Auto Farm Gold", "Auto Farm Gold BETA", function()
+
+    -- Oyuncuyu ve karakterini al
+local player = game.Players.LocalPlayer
+local character = player.Character or player.CharacterAdded:Wait()
+local humanoidRootPart = character:WaitForChild("HumanoidRootPart")
+
+-- Yeni bir parça (blok) oluştur
+local part = Instance.new("Part")
+part.Size = Vector3.new(5, 5, 5)  -- Blok boyutunu ayarla
+part.Anchored = true  -- Bloku sabit yap
+part.CanCollide = true  -- Çarpışmaları kapat
+part.Transparency = 0.1  -- Bloku yarı saydam yap
+part.Parent = game:GetService("Workspace")
+
+-- Bloğun konumunu güncelleme fonksiyonu
+local function updateBlockPosition()
+    part.Position = humanoidRootPart.Position - Vector3.new(0, (humanoidRootPart.Size.Y / 2) + 5.5, 0)
+end
+
+-- Her karede bloğun konumunu güncelle
+game:GetService("RunService").Heartbeat:Connect(updateBlockPosition)
+
+-- Karakter yeniden doğduğunda bloğun konumunu güncelle
+player.CharacterAdded:Connect(function(newCharacter)
+    character = newCharacter
+    humanoidRootPart = newCharacter:WaitForChild("HumanoidRootPart")
+    updateBlockPosition()
+end)
+
+    
+
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-51.5656433, 65.0000458, 1369.09009, 1, 0, 0, 0, 1, 0, 0, 0, 1)
+    wait(0.5)
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-51.5656433, 65.0000458, 2139.09009, 1, 0, 0, 0, 1, 0, 0, 0, 1)
+    wait(0.5)
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-51.5656433, 65.0000458, 2909.09009, 1, 0, 0, 0, 1, 0, 0, 0, 1)
+    wait(0.5)
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-51.5656433, 65.0000458, 3679.09009, 1, 0, 0, 0, 1, 0, 0, 0, 1)
+    wait(0.5)
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-51.5656433, 65.0000458, 4449.08984, 1, 0, 0, 0, 1, 0, 0, 0, 1)
+    wait(0.5)
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-53.5669785, 72.6005325, 5218.14209, 1, 0, 0, 0, 1, 0, 0, 0, 1)
+    wait(0.5)
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-51.5656433, 65.0000458, 5989.08984, 1, 0, 0, 0, 1, 0, 0, 0, 1)
+    wait(0.5)
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-51.5656433, 65.0000458, 6759.08984, 1, 0, 0, 0, 1, 0, 0, 0, 1)
+    wait(0.5)
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-51.5656433, 65.0000458, 7529.08984, 1, 0, 0, 0, 1, 0, 0, 0, 1)
+    wait(0.5)
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-51.5656433, 65.0000458, 8299.08984, 1, 0, 0, 0, 1, 0, 0, 0, 1)
+    wait(0.5)
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-55.7065125, -358.739624, 9492.35645, 0, 0, -1, 0, 1, 0, 1, 0, 0)
+    wait(1)
+    
+end)
 
 local Tab = Window:NewTab("Player")
 local Section = Tab:NewSection("Player")
@@ -22,7 +78,7 @@ local Tab = Window:NewTab("Teleporters")
 local Section = Tab:NewSection("Teleporters")
 
 Section:NewButton("WaterFall Secret Place", "Click to teleport to the Secret Door", function()
-    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(225.491638, -10.5000839, 1175.09253, -1, 0, 0, 0, 1, 0, 0, 0, -1)
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(120.934334, -19.4000263, 1171.79236, 1, 0, 0, 0, 1, 0, 0, 0, 1)
 end)
 
 Section:NewButton("White Team", "Click to teleport to the White Team", function()
