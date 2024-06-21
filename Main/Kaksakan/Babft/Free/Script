@@ -37,6 +37,7 @@ end)
 
     
 
+while true do
     game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-51.5656433, 65.0000458, 1369.09009, 1, 0, 0, 0, 1, 0, 0, 0, 1)
     wait(0.5)
     game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-51.5656433, 65.0000458, 2139.09009, 1, 0, 0, 0, 1, 0, 0, 0, 1)
@@ -58,7 +59,12 @@ end)
     game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-51.5656433, 65.0000458, 8299.08984, 1, 0, 0, 0, 1, 0, 0, 0, 1)
     wait(0.5)
     game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-55.7065125, -358.739624, 9492.35645, 0, 0, -1, 0, 1, 0, 1, 0, 0)
-    wait(1)
+    
+    wait(25)  -- 10 saniye bekle
+    
+    -- Döngü başa dönecek ve işlem tekrarlanacak
+end
+
     
 end)
 
