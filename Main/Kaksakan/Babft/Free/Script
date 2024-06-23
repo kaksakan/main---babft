@@ -7,8 +7,102 @@ local Window = Library.CreateLib("Kak.Hub Babft Script", "DarkTheme")
 local Tab = Window:NewTab("Main")
 local Section = Tab:NewSection("Main")
 
-Section:NewButton("Auto Farm Gold", "Auto Farm Gold BETA", function()
+Section:NewButton("Auto Farm Gold (with tweening)", "Auto Farm Gold BETA", function()
+    wait(1)
 
+    -- Oyuncuyu ve karakterini al
+local player = game.Players.LocalPlayer
+local character = player.Character or player.CharacterAdded:Wait()
+local humanoidRootPart = character:WaitForChild("HumanoidRootPart")
+
+-- Yeni bir parça (blok) oluştur
+local part = Instance.new("Part")
+part.Size = Vector3.new(5, 5, 5)  -- Blok boyutunu ayarla
+part.Anchored = true  -- Bloku sabit yap
+part.CanCollide = true  -- Çarpışmaları kapat
+part.Transparency = 0.1  -- Bloku yarı saydam yap
+part.Parent = game:GetService("Workspace")
+
+-- Bloğun konumunu güncelleme fonksiyonu
+local function updateBlockPosition()
+    part.Position = humanoidRootPart.Position - Vector3.new(0, (humanoidRootPart.Size.Y / 2) + 5.5, 0)
+end
+
+-- Her karede bloğun konumunu güncelle
+game:GetService("RunService").Heartbeat:Connect(updateBlockPosition)
+
+-- Karakter yeniden doğduğunda bloğun konumunu güncelle
+player.CharacterAdded:Connect(function(newCharacter)
+    character = newCharacter
+    humanoidRootPart = newCharacter:WaitForChild("HumanoidRootPart")
+    updateBlockPosition()
+end)
+
+    
+
+while true do
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-33.5484009, -4.61924553, -523.516724, 1.4424324e-05, -1, 6.00814819e-05, -0.707107067, 3.23057175e-05, 0.707106531, -0.707106531, -5.2690506e-05, -0.707107067)
+wait(3)
+local TS = game:GetService("TweenService")
+local tween = TS:Create(game.Players.LocalPlayer.Character.HumanoidRootPart, TweenInfo.new(3), {CFrame = CFrame.new(-51.5656433, 65.0000458, 1369.09009, 1, 0, 0, 0, 1, 0, 0, 0, 1)})
+tween:Play()
+wait(1)
+local TS = game:GetService("TweenService")
+local tween = TS:Create(game.Players.LocalPlayer.Character.HumanoidRootPart, TweenInfo.new(3), {CFrame = CFrame.new(-51.5656433, 65.0000458, 2139.09009, 1, 0, 0, 0, 1, 0, 0, 0, 1)})
+tween:Play()
+wait(1)
+local TS = game:GetService("TweenService")
+local tween = TS:Create(game.Players.LocalPlayer.Character.HumanoidRootPart, TweenInfo.new(3), {CFrame = CFrame.new(-51.5656433, 65.0000458, 2909.09009, 1, 0, 0, 0, 1, 0, 0, 0, 1)})
+tween:Play()
+wait(1)
+local TS = game:GetService("TweenService")
+local tween = TS:Create(game.Players.LocalPlayer.Character.HumanoidRootPart, TweenInfo.new(3), {CFrame = CFrame.new(-51.5656433, 65.0000458, 3679.09009, 1, 0, 0, 0, 1, 0, 0, 0, 1)})
+tween:Play()
+wait(1)
+local TS = game:GetService("TweenService")
+local tween = TS:Create(game.Players.LocalPlayer.Character.HumanoidRootPart, TweenInfo.new(3), {CFrame = CFrame.new(-51.5656433, 65.0000458, 4449.08984, 1, 0, 0, 0, 1, 0, 0, 0, 1)})
+tween:Play()
+wait(1)
+local TS = game:GetService("TweenService")
+local tween = TS:Create(game.Players.LocalPlayer.Character.HumanoidRootPart, TweenInfo.new(3), {CFrame = CFrame.new(-53.5669785, 72.6005325, 5218.14209, 1, 0, 0, 0, 1, 0, 0, 0, 1)})
+tween:Play()
+wait(1)
+local TS = game:GetService("TweenService")
+local tween = TS:Create(game.Players.LocalPlayer.Character.HumanoidRootPart, TweenInfo.new(3), {CFrame = CFrame.new(-51.5656433, 65.0000458, 5989.08984, 1, 0, 0, 0, 1, 0, 0, 0, 1)})
+tween:Play()
+wait(1)
+local TS = game:GetService("TweenService")
+local tween = TS:Create(game.Players.LocalPlayer.Character.HumanoidRootPart, TweenInfo.new(3), {CFrame = CFrame.new(-51.5656433, 65.0000458, 6759.08984, 1, 0, 0, 0, 1, 0, 0, 0, 1)})
+tween:Play()
+wait(1)
+local TS = game:GetService("TweenService")
+local tween = TS:Create(game.Players.LocalPlayer.Character.HumanoidRootPart, TweenInfo.new(3), {CFrame = CFrame.new(51.5656433, 65.0000458, 7529.08984, 1, 0, 0, 0, 1, 0, 0, 0, 1)})
+tween:Play()
+wait(1)
+local TS = game:GetService("TweenService")
+local tween = TS:Create(game.Players.LocalPlayer.Character.HumanoidRootPart, TweenInfo.new(3), {CFrame = CFrame.new(-51.5656433, 65.0000458, 8299.08984, 1, 0, 0, 0, 1, 0, 0, 0, 1)})
+tween:Play()
+wait(1)
+local TS = game:GetService("TweenService")
+local tween = TS:Create(game.Players.LocalPlayer.Character.HumanoidRootPart, TweenInfo.new(3), {CFrame = CFrame.new(-113.37661, 163.600052, 8819.49023, 0, 0, -1, 0, 1, 0, 1, 0, 0)})
+tween:Play()
+wait(1)
+local TS = game:GetService("TweenService")
+local tween = TS:Create(game.Players.LocalPlayer.Character.HumanoidRootPart, TweenInfo.new(3), {CFrame = CFrame.new(-55.7065125, -358.739624, 9492.35645, 0, 0, -1, 0, 1, 0, 1, 0, 0)})
+tween:Play()
+wait(1)
+
+
+    
+    wait(25)  -- 10 saniye bekle
+    
+    -- Döngü başa dönecek ve işlem tekrarlanacak
+end
+
+    
+end)
+
+Section:NewButton("Auto Farm Gold (with teleporting)", "AutoFarm Gold BETA", function()
     -- Oyuncuyu ve karakterini al
 local player = game.Players.LocalPlayer
 local character = player.Character or player.CharacterAdded:Wait()
@@ -133,4 +227,5 @@ end)
 
 Section:NewButton("Mobile Keybord", "Use this if u are on MOBİLE", function()
     loadstring(game:HttpGet("https://raw.githubusercontent.com/advxzivhsjjdhxhsidifvsh/mobkeyboard/main/main.txt", true))()
+
 end)
